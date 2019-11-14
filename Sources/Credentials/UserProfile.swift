@@ -20,7 +20,7 @@ import Foundation
 
 /// The user's profile information. Different authentication services provide
 /// different user information which is used to fill instances of this class.
-public class UserProfile {
+public class UserProfile: Codable {
     
     /// The user's ID.
     public var id: String
@@ -32,7 +32,7 @@ public class UserProfile {
     public var displayName: String
     
     /// A structure for the user's name.
-    public struct UserProfileName {
+    public struct UserProfileName: Codable {
         
         /// The family/last name of the user.
         public var familyName: String
@@ -59,7 +59,7 @@ public class UserProfile {
     public var name: UserProfileName?
     
     /// A structure for user's email address.
-    public struct UserProfileEmail {
+    public struct UserProfileEmail: Codable {
 
         /// The actual email address.
         public var value: String
@@ -81,7 +81,7 @@ public class UserProfile {
     public var emails: [UserProfileEmail]?
     
     /// A structure for the user's photo.
-    public struct UserProfilePhoto {
+    public struct UserProfilePhoto: Codable {
 
         /// The URL of the image.
         public var value: String
