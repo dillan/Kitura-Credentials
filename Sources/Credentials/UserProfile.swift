@@ -98,7 +98,7 @@ public class UserProfile: Codable {
     public var photos: [UserProfilePhoto]?
 
     /// A dictionary of additional properties. The values have to be serializable.
-    public var extendedProperties: [String:Any]
+    public var extendedProperties: [String:Codable]
     
     /// Initialize a `UserProfile` instance.
     ///
